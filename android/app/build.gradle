@@ -1,0 +1,31 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.smart_insulin_app"
+    compileSdk = 34  // ✅ Set to 34
+
+    defaultConfig {
+        applicationId = "com.example.smart_insulin_app"
+        minSdk = 21  // ✅ Minimum SDK version for Firebase compatibility
+        targetSdk = 34  // ✅ Match target SDK with compile SDK
+        versionCode = 1
+        versionName = "1.0"
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+// ✅ Apply Firebase Plugin
+apply plugin: 'com.google.gms.google-services'
