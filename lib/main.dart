@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'signin_screen.dart';  // Import the sign-in screen
-import 'home_page.dart';  // Import the home screen (dashboard)
+import 'login_screen.dart';  // Import the new login screen
+import 'home_page.dart';  // Import the home screen
+import 'signup_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,9 +23,10 @@ class SmartInsulinApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
       themeMode: ThemeMode.system,
-      home: SignInScreen(), // Start with Sign-In screen
+      home: LoginScreen(), // Start with Login screen
       routes: {
-        '/dashboard': (context) => HomePage(), // Navigate to Dashboard/Home
+        '/dashboard': (context) => HomePage(), // Navigate to Dashboard
+        '/signup': (context) => SignUpScreen(), // Navigate to Sign Up
       },
     );
   }

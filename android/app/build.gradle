@@ -1,31 +1,43 @@
 plugins {
-    id "com.android.application"
-    id "kotlin-android"
-    id "dev.flutter.flutter-gradle-plugin"
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'com.google.gms.google-services'  // ✅ Firebase Plugin
 }
 
 android {
-    namespace = "com.example.smart_insulin_app"
-    compileSdk = 34  // ✅ Set to 34
+    namespace "com.example.smartinsulinapp"
+    compileSdk 34  // ✅ Target the latest SDK version
 
     defaultConfig {
-        applicationId = "com.example.smart_insulin_app"
-        minSdk = 21  // ✅ Minimum SDK version for Firebase compatibility
-        targetSdk = 34  // ✅ Match target SDK with compile SDK
-        versionCode = 1
-        versionName = "1.0"
+        applicationId "com.example.smartinsulinapp"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
     }
 
     buildTypes {
         release {
-            signingConfig = signingConfigs.debug
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 }
 
-flutter {
-    source = "../.."
-}
+dependencies {
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
 
-// ✅ Apply Firebase Plugin
-apply plugin: 'com.google.gms.google-services'
+    // 🔹 Firebase BOM (Manages Firebase versions automatically)
+    implementation platform('com.google.firebase:firebase-bom:32.7.2')
+
+    // 🔹 Firebase Authentication
+    implementation 'com.google.firebase:firebase-auth-ktx'
+
+    // 🔹 Firebase Firestore (For user data storage)
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+
+    // 🔹 Firebase Analytics (Optional but recommended)
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+}
