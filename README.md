@@ -1,1 +1,3 @@
 # SmartInsulinApp
+
+Main & Master: Elizabeth
