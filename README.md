@@ -6,7 +6,7 @@
 
 ## Wirefames:
 Sign Up Screen(s)  
-<img src="signup.png" alt="SignUp homepage" width="300"/>
+<img src="signup.png" alt="SignUp homepage" width="500"/>
 
 Sign In Screen(s)  
 <img src="signin.png" alt="SignIn homepage" width="300"/>
