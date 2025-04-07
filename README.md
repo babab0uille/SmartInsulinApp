@@ -17,7 +17,7 @@ Dashboard Screen(s)
 <img src="dashboard3.png" alt="Dashboard homepage" width="300"/>
 
 Error Screen(s)  
-<img src="error.png" alt="error homepage" width="300"/>
+<img src="errors.png" alt="error homepage" width="300"/>
 
 
 
