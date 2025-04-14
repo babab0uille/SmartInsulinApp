@@ -123,7 +123,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     borderSide: BorderSide(color: Colors.black, width: 1),),
           //labelStyle: const TextStyle(color: Colors.white70),
         ),
-        style: const TextStyle(color: Colors.white),
+        style: const TextStyle(color: Colors.black),
       ),
     );
   }

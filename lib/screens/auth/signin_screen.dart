@@ -65,7 +65,6 @@ class _SignInScreenState extends State<SignInScreen> {
               // const SizedBox(height: 8),
               TextField(
                 controller: _idController,
-                
                 decoration: InputDecoration(
                   labelText: 'Email',
                   labelStyle: const TextStyle(color: Colors.black),
@@ -83,7 +82,7 @@ class _SignInScreenState extends State<SignInScreen> {
               // const Text('PASSWORD'),
               TextField(
                 controller: _passwordController,
-                
+                obscureText: true,
                 decoration: InputDecoration(
                   labelText: 'password',
                   labelStyle: const TextStyle(color: Colors.black),
